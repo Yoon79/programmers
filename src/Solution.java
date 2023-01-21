@@ -2,13 +2,11 @@ class Solution {
     public int solution(int num1, int num2) {
         int answer = 0;
 
-        boolean result1 = -50000 <= num1 &&  num1 <= 50000;
-        boolean result2 = -50000 <= num2 &&  num2 <= 50000;
-
-        if(!result1 && !result2)
-            return answer;
-
-        answer = num1-num2;
+        if(0 <= num1 &&  num1 <= 100
+                && 0 <= num2 &&  num2 <= 100){
+            double result = (double)num1 / (double)num2 * 1000;
+            answer = (int)result;
+        }
         return answer;
     }
 }
